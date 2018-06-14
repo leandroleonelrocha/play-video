@@ -8,9 +8,18 @@ import './search.css';
 //    )
 
 //}
+
 const Search = (props) => (
     <form className="Search" onSubmit={props.handleSubmit}> 
-           <input type="text" name="search" className="Search-input"/>
+           <input 
+           		type="text" 
+           		defaultValue="asdsad"
+           		name="search" 
+           		className="Search-input" 
+           		ref={props.setRef} 
+           		onChange={props.handleChange}
+           		value={props.value}
+           		/>
     </form>
 )
 
